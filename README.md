@@ -17,20 +17,21 @@
 - exemplo:
 
 *antes do destructing:*
-
-    `const Destructuring = ({}) => {
+```
+    const Destructuring = ({}) => {
         return (
             <div>
                 <h2>{props.title}</h2>
                 <h2>{props.description}</h2>
             </div>
         )
-    }`
+    }
+```
 
 **depois do destructuring** 
 
-    ` 
-    interface Props { // criado uma interface com ts
+```
+interface Props { // criado uma interface com ts
         title: string;
         description: string | undefined;
     };
@@ -43,14 +44,14 @@
             </div>
         )
     }
-    `
+```
 
 ### hooks com ts
 - useState: consultar e alterar o estado de algum dado.
 - para usar nós atrelamos uma função **set** a um evento, como mudança de dado em input e alteramos o valor da variável base
 - podemos adptar esse recurso para TS, dessa forma:
-
-`   const [text, setText] = useState<string | null>(null);
+```
+  const [text, setText] = useState<string | null>(null);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setText(e.target.value); // always use set to change the value of the state
@@ -63,7 +64,8 @@
         </div>
     }
 
-`
+```
+
 - o ts tem methods de tipagem para serem usados pelo react
 - o useState também pode ser tipado
 
@@ -72,13 +74,15 @@
 ### types
 
 ## events & types
-- pra eventos de input existe o tipo específico que é o ChangeEvent do react. Pra importar:
+- pra eventos de input existe o tipo específico que é o ChangeEvent do react. Pra importar: 
 
-`import {ChangeEvent} from 'react'` 
+```import {ChangeEvent} from 'react'```
  
  e para usar: 
 
-`const handleInputText = (e: ChangeEvent<HTMLInputElement>) => {
+```
+const handleInputText = (e: ChangeEvent<HTMLInputElement>) => {
     //ação
-}`
+}
+```
 ### ContextApi
