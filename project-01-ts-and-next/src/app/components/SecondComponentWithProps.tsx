@@ -1,6 +1,6 @@
 import React from "react";
 
-interface Props {//2882,90
+interface Props {
     name: string
 }
 

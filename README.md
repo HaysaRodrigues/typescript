@@ -70,4 +70,15 @@
 ### enum
 
 ### types
+
+## events & types
+- pra eventos de input existe o tipo específico que é o ChangeEvent do react. Pra importar:
+
+`import {ChangeEvent} from 'react'` 
+ 
+ e para usar: 
+
+`const handleInputText = (e: ChangeEvent<HTMLInputElement>) => {
+    //ação
+}`
 ### ContextApi

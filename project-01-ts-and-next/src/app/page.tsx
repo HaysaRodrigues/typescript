@@ -1,8 +1,11 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import FirstComponent from './components/FirstComponent'
-import SecondComponentWithProps from './components/SecondComponentWithProps'
-import DestructuringProps from './components/DestructuringProps'
+"use client"; // next.js entende que o uso de useState
+// não deveria misturar com html, se vc precisar fazer isso
+// então precisa usar o use cliente no componente ou no pai do componente
+import styles from './page.module.css';
+import FirstComponent from './components/FirstComponent';
+import SecondComponentWithProps from './components/SecondComponentWithProps';
+import DestructuringProps from './components/DestructuringProps';
+import StateComponent from './components/StateComponent';
 
 export default function Home() {
   return (
@@ -11,7 +14,8 @@ export default function Home() {
     
     <main className={styles.main}> 
       <div className={styles.description}>
-        <FirstComponent />   
+        <StateComponent />
+        <FirstComponent />
         <SecondComponentWithProps name={"Typescript"} /> 
         <DestructuringProps 
                             title='Magic'
